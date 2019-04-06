@@ -1,9 +1,9 @@
 #define which team will win 
 def soccer(team1,team2)
 	if team1 > team2
-		puts "Team 1 wons!"
+		puts "Team 1 won!"
 	elsif team2 > team1
-		puts "team 2 wons!"
+		puts "team 2 won!"
 	elsif team1 = team2
 		puts " The game was draw!"
 	end
@@ -19,20 +19,20 @@ def menu()
 	#get number from user for team1
 	puts "Enter number for team1"
 	team1 = gets.chomp
-		while !is_num(team1) || team1.to_i < 0 do
-			puts "Text and negative number are not acceptable "
-			puts "Enter numbers you want for team 1 again"
-			team1 = gets.chomp
-	  	end
+	while !is_num(team1) || team1.to_i < 0 do
+		puts "Text and negative number are not acceptable "
+		puts "Enter numbers you want for team 1 again"
+		team1 = gets.chomp
+	end
 
 	#get number from user for team2
 	puts "Enter number for team2"
 	team2 = gets.chomp
-		while !is_num(team2) || team2.to_i < 0 do
-			puts "Text and negative number are not acceptable "
-			puts "Enter numbers you want for team 2 again"
-			team2 = gets.chomp
-	  	end
+	while !is_num(team2) || team2.to_i < 0 do
+		puts "Text and negative number are not acceptable "
+		puts "Enter numbers you want for team 2 again"
+		team2 = gets.chomp
+	end
 
   	#if user put proper number, show score and call soccer function
 	if (is_num(team1) && is_num(team2))
