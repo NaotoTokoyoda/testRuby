@@ -56,9 +56,9 @@ def is_numeric?(obj)
 end
 
 def smenu()
-  puts "------------------------------------------"
-  puts "Which scale you want to calculate from?\nType index number from  1)kelvin 2)fahrenheit 3)celsius"
-  input_scale = gets.chomp
+    puts "------------------------------------------"
+    puts "Which scale you want to calculate from?\nType index number from  1)kelvin 2)fahrenheit 3)celsius"
+    input_scale = gets.chomp
     case input_scale.to_i
     when 1
         input_scale = "kelvin"
@@ -70,27 +70,27 @@ def smenu()
         puts "Please type correct index number!"
         smenu()
     end
-  puts "Put tempature of #{input_scale} you want to calculate"
-  tempature = gets.chomp.to_f
+    puts "Put tempature of #{input_scale} you want to calculate"
+    tempature = gets.chomp.to_f
     if is_numeric?(tempature)
         tempature
     else
       puts "Please type correct index number!"
       smenu()
     end
-  puts "Which scale you want to calculate from #{input_scale} to?\nType name from 1)kelvin 2)fahrenheit 3)celsius"
-  output_scale = gets.chomp
-  case output_scale.to_i
-  when 1
-    output_scale = "kelvin"
-  when 2
-    output_scale = "fahrenheit"
-  when 3
-    output_scale = "celsius"
-  else
+    puts "Which scale you want to calculate from #{input_scale} to?\nType name from 1)kelvin 2)fahrenheit 3)celsius"
+    output_scale = gets.chomp
+    case output_scale.to_i
+    when 1
+        output_scale = "kelvin"
+    when 2
+        output_scale = "fahrenheit"
+    when 3
+        output_scale = "celsius"
+    else
       puts "Please type correct index number!"
       smenu()
-  end
-  convert_temp(tempature,input_scale,output_scale)
+    end
+    convert_temp(tempature,input_scale,output_scale)
 end
 smenu()
