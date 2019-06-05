@@ -55,6 +55,7 @@ def is_numeric?(obj)
    obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
 end
 
+#start menu
 def smenu()
     puts "------------------------------------------"
     puts "Which scale you want to calculate from?\nType index number from  1)kelvin 2)fahrenheit 3)celsius"
@@ -75,7 +76,7 @@ def smenu()
     if is_numeric?(tempature)
         tempature
     else
-      puts "Please type correct index number!"
+      puts "Please type correct number! Try it again!"
       smenu()
     end
     puts "Which scale you want to calculate from #{input_scale} to?\nType name from 1)kelvin 2)fahrenheit 3)celsius"
