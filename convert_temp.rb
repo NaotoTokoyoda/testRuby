@@ -4,13 +4,13 @@ def convert_temp(tempature,input_scale,output_scale)
     if (input_scale == "celsius") && (output_scale == "kelvin")
         calc = tempature +  273.15
         puts "I caluculated!"
-        puts "If #{tempature} celsius, it is #{calc} kelvin"
+        puts "If #{tempature} celsius, it is #{calc.round(2)} kelvin"
     #celsius to fahrenheit
     #(0°C × 9/5) + 32 = 32°F
     elsif (input_scale == "celsius") && (output_scale == "fahrenheit")
         calc = (tempature * 9.0 / 5.0) + 32.0 
         puts "I caluculated!"
-        puts "If #{tempature} celsius, it is #{calc} fahrenheit"
+        puts "If #{tempature} celsius, it is #{calc.round(2)} fahrenheit"
     #celsius to celsius
     elsif (input_scale == "celsius") && (output_scale == "celsius")
         puts "You tried to calculate celsius to celsius!\nTry it again!"
@@ -20,13 +20,13 @@ def convert_temp(tempature,input_scale,output_scale)
     elsif (input_scale == "fahrenheit") && (output_scale == "celsius")
         calc =  (tempature - 32.0) * 5.0 / 9.0 
         puts "I caluculated!"
-        puts "If #{tempature} fahrenheit, it is #{calc} celsius"
+        puts "If #{tempature} fahrenheit, it is #{calc.round(2)} celsius"
     #fahrenheit to kelvin
     #(32°F − 32) × 5/9 + 273.15 = 273.15K
     elsif (input_scale == "fahrenheit") && (output_scale == "kelvin")
         calc =  (tempature - 32.0) * 5.0 / 9.0 + 273.15
         puts "I caluculated!"
-        puts "If #{tempature} fahrenheit, it is around #{calc} celsius."
+        puts "If #{tempature} fahrenheit, it is around #{calc.round(2)} celsius."
     #fahrenheit to fahrenheit
     elsif (input_scale == "fahrenheit") && (output_scale == "fahrenheit")
         puts "You tried to calculate fahrenheit to fahrenheit!\nTry it again!"
@@ -36,13 +36,13 @@ def convert_temp(tempature,input_scale,output_scale)
     elsif (input_scale == "kelvin") && (output_scale == "celsius")
         calc =  tempature - 273.15
         puts "I caluculated!"
-        puts "If #{tempature} kelvin, it is #{calc} celsius."
+        puts "If #{tempature} kelvin, it is #{calc.round(2)} celsius."
     #kelvin to fahrenheit
     #(0.5K − 273.15) × 9/5 + 32 = -458.8°F
     elsif (input_scale == "kelvin") && (output_scale == "fahrenheit")
         calc =  (tempature - 273.15) * 9.0 / 5.0 + 32.0
         puts "I caluculated!"
-        puts "If #{tempature} kelvin, it is #{calc} fahrenheit."
+        puts "If #{tempature} kelvin, it is #{calc.round(2)} fahrenheit."
     elsif (input_scale == "kelvin") && (output_scale == "kelvin")
         puts "You tried to calculate kelvin to kelvin!\nTry it again!"
         smenu()
